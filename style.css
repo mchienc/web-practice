@@ -1,8 +1,27 @@
 /* ===================================================
-   Assignment: Styling Pre-Existing Website
+   Coursera - Homework 2: Advanced CSS & Accessibility
    =================================================== */
 
-/* Step 3: body tag - font family and font size */
+/* Định dạng liên kết Skip to Main Content (Hỗ trợ Accessibility) */
+.skip-link {
+  position: absolute;
+  top: -80px; /* Ẩn khỏi màn hình khi chưa dùng */
+  left: 10px;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/* Hiển thị rõ ràng khi người dùng nhấn phím Tab */
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Quy tắc Body: font family và font size */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
@@ -12,84 +31,100 @@ body {
   color: #1f2937;
 }
 
-/* Step 4: header tag - background color */
+/* Quy tắc Header: background color */
 header {
-  background-color: #dbeafe; /* Xanh nhạt */
+  background-color: #dbeafe;
   padding: 24px;
 }
 
-/* Step 5: nav tag - background color */
-/* Dành cho các trang có thẻ nav */
-nav {
-  background-color: #e2e8f0;
-  padding: 12px;
-  text-align: center;
-}
-
-/* Step 6: main tag - background color and font size */
-/* Thêm flexbox để các ô màu tự động xếp hàng ngang và xuống dòng đều đặn */
+/* Quy tắc Main: background color và font size */
 main {
   background-color: #ffffff;
   font-size: 18px;
   padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
 }
 
-/* Step 7: footer tag - background color */
+/* Quy tắc Footer: background color */
 footer {
   background-color: #e2e8f0;
   padding: 20px;
   text-align: center;
 }
 
-/* Định dạng thẻ a trong footer đảm bảo đủ độ tương phản màu chuẩn WAVE */
 footer a {
   color: #1e3a8a;
   font-weight: bold;
-  text-decoration: none;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Step 8: li tag - display and width */
-/* Áp dụng cho các trang có danh sách menu */
-li {
-  display: inline-block;
-  width: 140px;
-  margin: 0 8px;
-}
-
-/* Step 9: h1 tag - text alignment, font family, and color */
+/* Quy tắc H1: text alignment, font family, color */
 h1 {
   text-align: center;
   font-family: Georgia, "Times New Roman", serif;
-  color: #1e3a8a; /* Xanh đậm tương phản cao trên nền dbeafe */
+  color: #1e3a8a;
   margin: 0;
 }
 
-/* Step 10: p tag - line height */
+/* Quy tắc P: line height */
 p {
   line-height: 1.6;
   margin-top: 8px;
 }
 
-/* Canh giữa và viền nhẹ cho từng ô màu để tạo thành các card đẹp mắt */
-main div {
+/* --- Yêu cầu Homework 2: Comment out định dạng li --- */
+/*
+li {
+  display: inline-block;
+  width: 140px;
+  margin: 0 8px;
+}
+*/
+
+/* --- Yêu cầu Homework 2: nav dùng inline-block và width khoảng 80% --- */
+nav {
+  display: inline-block;
+  width: 80%;
+  background-color: #e2e8f0;
+  padding: 10px;
+}
+
+/* --- Yêu cầu Homework 2: Descendant selector định dạng ảnh trong nav khoảng 10% --- */
+nav img {
+  width: 10%;
+  vertical-align: middle;
+}
+
+/* --- Yêu cầu Homework 2: Định dạng class .grid với 2 cột khoảng 40% --- */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 20px;
+}
+
+/* --- Yêu cầu Homework 2: Descendant selector ảnh trong .grid có width 100% --- */
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Căn giữa chữ và làm khung cho từng ô trong grid */
+.grid div {
   text-align: center;
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  padding: 15px;
+  padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-main img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
+/* --- Yêu cầu Homework 2: Định dạng class .flex --- */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
