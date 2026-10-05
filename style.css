@@ -1,60 +1,95 @@
 /* ===================================================
    Assignment: Styling Pre-Existing Website
-   Meets all minimum property requirements (Steps 3-10)
    =================================================== */
 
-/* Step 3: Body tag - font family and font size */
+/* Step 3: body tag - font family and font size */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
+  background-color: #f8fafc;
   color: #1f2937;
 }
 
-/* Step 4: Header tag - background color */
+/* Step 4: header tag - background color */
 header {
-  background-color: #dbeafe; /* Soft blue */
-  padding: 20px;
+  background-color: #dbeafe; /* Xanh nhạt */
+  padding: 24px;
 }
 
-/* Step 5: Nav tag - background color */
+/* Step 5: nav tag - background color */
+/* Dành cho các trang có thẻ nav */
 nav {
-  background-color: #e2e8f0; /* Cool light gray */
-  padding: 10px;
-}
-
-/* Step 6: Main tag - background color and font size */
-main {
-  background-color: #ffffff; /* Clean white */
-  font-size: 18px;
-  padding: 20px;
-}
-
-/* Step 7: Footer tag - background color */
-footer {
-  background-color: #e2e8f0; /* Neutral light gray */
-  padding: 15px;
+  background-color: #e2e8f0;
+  padding: 12px;
   text-align: center;
+}
+
+/* Step 6: main tag - background color and font size */
+/* Thêm flexbox để các ô màu tự động xếp hàng ngang và xuống dòng đều đặn */
+main {
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Step 7: footer tag - background color */
+footer {
+  background-color: #e2e8f0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Định dạng thẻ a trong footer đảm bảo đủ độ tương phản màu chuẩn WAVE */
+footer a {
+  color: #1e3a8a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Step 8: li tag - display and width */
-/* Note: inline-block is used because standard inline elements ignore width */
+/* Áp dụng cho các trang có danh sách menu */
 li {
   display: inline-block;
   width: 140px;
-  margin-right: 10px;
+  margin: 0 8px;
 }
 
 /* Step 9: h1 tag - text alignment, font family, and color */
-/* High contrast: #1e3a8a dark navy on #dbeafe light blue gives ~9.8:1 ratio */
 h1 {
   text-align: center;
   font-family: Georgia, "Times New Roman", serif;
-  color: #1e3a8a;
+  color: #1e3a8a; /* Xanh đậm tương phản cao trên nền dbeafe */
+  margin: 0;
 }
 
 /* Step 10: p tag - line height */
 p {
   line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Canh giữa và viền nhẹ cho từng ô màu để tạo thành các card đẹp mắt */
+main div {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+main img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
 }
